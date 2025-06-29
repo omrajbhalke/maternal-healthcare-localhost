@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Maternal Health Risk Prediction</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <style>
+        .banner {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .banner h1 {
+            font-size: 2.5rem;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+        }
+
+        .intro-section {
+            padding: 2rem;
+            max-width: 900px;
+            margin: auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .intro-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #2980b9;
+        }
+
+        .intro-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            background-color: #27ae60;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #219150;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><a href="index.html">MaternaAI</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="predict.html">Risk Predictor</a></li>
+            <li><a href="patients.html">Patients</a></li>
+            <li><a href="health.html">Health Analysis</a></li>
+        </ul>
+    </nav>
+
+    <div class="banner">
+        <h1>Maternal Health Risk Prediction using ML</h1>
+    </div>
+
+    <section class="intro-section">
+        <h2>About the Project</h2>
+        <p>
+            Maternal health is a vital concern, and early risk detection can make a life-saving difference. Our project uses machine learning to determine whether a pregnant individual is Healthy or Risky based on key maternal health indicators.
+        </p>
+        <p>
+            By analyzing factors such as age, blood pressure, blood sugar level, body temperature, and heart rate, our model delivers fast and accurate predictions. This helps healthcare providers and expecting mothers make timely, informed decisions.
+        </p>
+        <p>
+            Our goal is to enhance prenatal care through AI, enabling proactive monitoring and promoting safer pregnancies with clear, data-driven health insights.
+        </p>
+        <a href="predict.html" class="cta-button">Start Risk Prediction</a>
+
+        <section id="tips" style="margin-top: 20px;">
+            <h2>Maternal Health Recommendations</h2>
+            <div class="tips-container" id="tipsContainer"></div>
+        </section>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2025 MaternaAI Maternal Care Project. Developed by Omraj Bhalke. All rights reserved.</p>
+    </footer>
+
+
+    <script>
+        const tips = [
+            {
+                title: "Stay Hydrated",
+                text: "Drink at least 8 glasses of water daily to maintain optimal body function.",
+                image: "tips/hydration.png"
+            },
+            {
+                title: "Attend Regular Prenatal Checkups",
+                text: "Visit your healthcare provider regularly during pregnancy to monitor your baby’s growth and detect any health concerns early. Prenatal checkups are essential for both maternal and fetal well-being.",
+                image: "tips/checkup.png"
+            },
+            {
+                title: "Monitor Your Vitals",
+                text: "Regularly check your blood pressure, sugar levels, and pulse rate.",
+                image: "tips/vitals.png"
+            },
+            {
+                title: "Eat Balanced Meals",
+                text: "Include fruits, vegetables, lean proteins, and whole grains in your diet.",
+                image: "tips/diet.png"
+            },
+            {
+                title: "Get Adequate Rest",
+                text: "Getting enough sleep helps your body cope with the physical and emotional changes of pregnancy. Aim for 7–9 hours of restful sleep each night, and take short naps if needed.",
+                image: "tips/rest.png"
+            },
+            {
+                title: "Take Prenatal Vitamins",
+                text: "Prenatal vitamins, especially those with folic acid, iron, and calcium, support your baby’s development and reduce the risk of birth defects. Take them daily as advised by your doctor.",
+                image: "tips/vitamins.png"
+            }
+        ];
+
+        const tipsContainer = document.getElementById("tipsContainer");
+        tips.forEach(tip => {
+            const card = document.createElement("div");
+            card.className = "tip-card";
+            card.innerHTML = `
+            <img src="${tip.image}" alt="${tip.title}">
+            <h4>${tip.title}</h4>
+            <p>${tip.text}</p>
+        `;
+            tipsContainer.appendChild(card);
+        });
+    </script>
+</body>
+
+</html>

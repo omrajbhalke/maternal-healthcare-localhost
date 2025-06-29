@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Maternal Health Risk Predictor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><a href="index.html">MaternaAI</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="predict.html">Risk Predictor</a></li>
+            <li><a href="patients.html">Patients</a></li>
+            <li><a href="health.html">Health Analysis</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h1>Predict Patient Health Risk</h1>
+        <div class="form-box">
+            <input type="text" id="name" placeholder="Name">
+            <input type="number" id="age" placeholder="Age">
+            <input type="number" id="diastolic" placeholder="Diastolic BP">
+            <input type="number" id="bs" placeholder="Blood Sugar">
+            <input type="number" id="temp" placeholder="Body Temperature">
+            <input type="number" id="pulse" placeholder="Heart Rate">
+            <button id="predictButton" onclick="predict()">Predict</button>
+        </div>
+
+        <h2 id="result"></h2>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MaternaAI Maternal Care Project. Developed by Omraj Bhalke. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

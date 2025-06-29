@@ -1,0 +1,11 @@
+Flask==2.3.3
+flask-cors==4.0.0
+joblib==1.4.2
+pymongo==4.7.1
+scikit-learn==1.4.2
+numpy==1.26.4
+xgboost==2.0.3
+
+# Testing dependencies
+pytest==8.2.1
+pytest-mock==3.14.0

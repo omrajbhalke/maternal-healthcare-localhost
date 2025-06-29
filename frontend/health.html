@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Health Analysis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><a href="index.html">MaternaAI</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="predict.html">Risk Predictor</a></li>
+            <li><a href="patients.html">Patients</a></li>
+            <li><a href="health.html">Health Analysis</a></li>
+        </ul>
+    </nav>
+
+    <main class="container2" style="margin-top: 20px;">
+        <!-- Section 1: Banner -->
+        <section class="banner">
+            <h1>Health Analysis Overview</h1>
+            <img src="tips\ai-health-banner.png" alt="Health Analysis" style="margin-top: 10px;" class="banner-img" />
+        </section>
+
+        <!-- Section 2: Stats Table -->
+        <section id="stats">
+            <h2>Summary Statistics by Risk Level</h2>
+            <div id="statsTableContainer"></div>
+        </section>
+
+        <!-- Section 3: Grouped Bar Chart -->
+        <section id="chart">
+            <h2>Risk-Based Health Parameter Comparison</h2>
+            <canvas id="groupedBarChart" height="200"></canvas>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MaternaAI Maternal Care Project. Developed by Omraj Bhalke. All rights reserved.</p>
+    </footer>
+
+    <script src="health.js"></script>
+</body>
+
+</html>
